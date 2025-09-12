@@ -1,0 +1,77 @@
+{# contao/templates/content_element/hyperlinkextended.html.twig #}
+{% extends "@Contao/content_element/_base.html.twig" %}
+
+{# Wrapper-Attribute erweitern: eigene Klasse hinzufügen & mit vorhandenen mergen #}
+{% set attributes = attrs()
+  .addClass('hyperlinkextended')
+  .mergeWith(attributes|default)
+%}
+
+{% block content %}
+  {% if hyperlinks is iterable and hyperlinks|length %}
+    {% for b in hyperlinks %}
+      {% set href = (b.url ?? '')|trim %}
+      {% if href %}
+        {% set title = (b.linkTitle is defined and b.linkTitle|trim != '') ? b.linkTitle : href %}
+
+        {# Basis-Link-Attribute #}
+        {% set linkAttrs = attrs()
+          .set('href', href|insert_tag)
+        %}
+        {% if b.linkClass is defined and b.linkClass|trim != '' %}
+          {% set linkAttrs = linkAttrs.addClass(b.linkClass) %}
+        {% endif %}
+        {% if b.target %}
+          {% set linkAttrs = linkAttrs.set('target', '_blank') %}
+        {% endif %}
+        {% if b.ariaLabel is defined and b.ariaLabel|trim != '' %}
+          {% set linkAttrs = linkAttrs.set('aria-label', b.ariaLabel) %}
+        {% endif %}
+
+        {# --- rel zusammenbauen --- #}
+        {% set rel = [] %}
+        {% set tokens = (b.relTokens is iterable) ? b.relTokens : [] %}
+
+        {# Nutzer-Tokens übernehmen (ohne noopener – das fügen wir nur bei target hinzu) #}
+        {% for t in tokens %}
+          {% set t = t|lower|trim %}
+          {% if t in ['noreferrer','nofollow','ugc','sponsored','external'] and t not in rel %}
+            {% set rel = rel|merge([t]) %}
+          {% endif %}
+        {% endfor %}
+
+        {# Bei neuem Tab noopener ergänzen #}
+        {% if b.target and 'noopener' not in rel %}
+          {% set rel = rel|merge(['noopener']) %}
+        {% endif %}
+
+        {# rel nur setzen, wenn es Tokens gibt #}
+        {% if rel|length %}
+          {% set linkAttrs = linkAttrs.set('rel', rel|join(' ')) %}
+        {% endif %}
+
+        {# --- download-Attribut (optional mit Dateiname) --- #}
+        {% if b.download %}
+          {% set dlName = (b.downloadFilename ?? '')|trim %}
+          {% if dlName != '' %}
+            {% set linkAttrs = linkAttrs.set('download', dlName) %}
+          {% else %}
+            {# leeres Attribut ist HTML5-konform (äquivalent zu boolean) #}
+            {% set linkAttrs = linkAttrs.set('download', '') %}
+          {% endif %}
+        {% endif %}
+
+        {# --- benutzerdefinierte data-/aria-Attribute --- #}
+        {% if b.customAttributes is iterable and b.customAttributes|length %}
+          {% for name, val in b.customAttributes %}
+            {% set linkAttrs = linkAttrs.set(name, val) %}
+          {% endfor %}
+        {% endif %}        
+
+        <a {{ linkAttrs }}>
+          {{ title|raw }}
+        </a>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endblock %}

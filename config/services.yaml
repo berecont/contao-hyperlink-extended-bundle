@@ -1,0 +1,18 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+  Berecont\ContaoHyperlinkExtendedBundle\:
+    resource: ../src
+
+  Berecont\ContaoHyperlinkExtendedBundle\Service\AttributePolicy:
+    arguments:
+      $allowData: '%berecont_hx.allow_data%'
+      $allowAria: '%berecont_hx.allow_aria%'
+      $allowedNames: '%berecont_hx.allowed_attribute_names%'
+      $allowedPatterns: '%berecont_hx.allowed_attribute_patterns%'  
+    
+  Berecont\ContaoHyperlinkExtendedBundle\Controller\ContentElement\HyperlinkExtendedController:
+    tags:
+      - { name: contao.content_element, category: 'links', type: 'hyperlinkextended', template: 'content_element/hyperlinkextended' }

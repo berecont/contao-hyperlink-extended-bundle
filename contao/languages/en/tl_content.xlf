@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2">
+  <file source-language="en" datatype="plaintext" original="messages">
+    <body>
+      <!-- Legend -->
+      <trans-unit id="tl_content.hyperlinkextended_legend">
+        <source>Hyperlink extended box</source>
+      </trans-unit>
+
+      <!-- Group field -->
+      <trans-unit id="tl_content.hyperlinks.0"><source>Hyperlinks</source></trans-unit>
+      <trans-unit id="tl_content.hyperlinks.1"><source>Define the hyperlinks.</source></trans-unit>
+
+      <!-- Existing fields -->
+      <trans-unit id="tl_content.hyperlink_linkTitle.0"><source>Link text</source></trans-unit>
+      <trans-unit id="tl_content.hyperlink_linkTitle.1"><source>Text shown instead of the URL.</source></trans-unit>
+
+      <trans-unit id="tl_content.hyperlink_ariaLabel.0"><source>ARIA label</source></trans-unit>
+      <trans-unit id="tl_content.hyperlink_ariaLabel.1"><source>Text for aria-label.</source></trans-unit>
+
+      <trans-unit id="tl_content.hyperlink_linkClass.0"><source>CSS class</source></trans-unit>
+      <trans-unit id="tl_content.hyperlink_linkClass.1"><source>Additional classes for the link.</source></trans-unit>
+
+      <trans-unit id="tl_content.hyperlink_customAttributes.0">
+        <source>Custom attributes</source>
+      </trans-unit>
+      <trans-unit id="tl_content.hyperlink_customAttributes.1">
+        <source>One per line, e.g. data-foo="bar" or aria-expanded=false. Allowed items: 'data-', 'aria-' and 'tabindex'. More attributes can be set in config/config.yaml file.</source>
+      </trans-unit>
+
+      <!-- rel tokens -->
+      <trans-unit id="tl_content.hyperlink_relTokens.0"><source>rel attribute</source></trans-unit>
+      <trans-unit id="tl_content.hyperlink_relTokens.1"><source>Select tokens for the rel attribute (multi-select).</source></trans-unit>
+
+      <!-- Option labels used via 'reference' -->
+      <trans-unit id="tl_content.hyperlink_rel_options.noopener"><source>noopener</source></trans-unit>
+      <trans-unit id="tl_content.hyperlink_rel_options.noreferrer"><source>noreferrer</source></trans-unit>
+      <trans-unit id="tl_content.hyperlink_rel_options.nofollow"><source>nofollow</source></trans-unit>
+      <trans-unit id="tl_content.hyperlink_rel_options.ugc"><source>ugc</source></trans-unit>
+      <trans-unit id="tl_content.hyperlink_rel_options.sponsored"><source>sponsored</source></trans-unit>
+      <trans-unit id="tl_content.hyperlink_rel_options.external"><source>external</source></trans-unit>
+
+      <!-- download -->
+      <trans-unit id="tl_content.hyperlink_download.0"><source>Force download</source></trans-unit>
+      <trans-unit id="tl_content.hyperlink_download.1"><source>Adds the download attribute.</source></trans-unit>
+
+      <!-- download filename -->
+      <trans-unit id="tl_content.hyperlink_downloadFilename.0"><source>Download filename</source></trans-unit>
+      <trans-unit id="tl_content.hyperlink_downloadFilename.1"><source>Optional filename for the downloaded file.</source></trans-unit>
+    </body>
+  </file>
+</xliff>

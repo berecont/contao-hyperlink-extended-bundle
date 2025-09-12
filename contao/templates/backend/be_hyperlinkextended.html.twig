@@ -1,0 +1,13 @@
+{% if hyperlinks is iterable and hyperlinks|length %}
+  {# limit_height auf dem Wrapper, damit die Zeile ggf. gekürzt wird #}
+  <span class="limit_height">
+    {% for b in hyperlinks %}
+      {% set t = (b.linkTitle ?? '')|trim %}
+      {% if t != '' %}
+        <span class="tl_textarea">{{ t|striptags }}</span>{% if not loop.last %}&nbsp;{% endif %}
+      {% endif %}
+    {% endfor %}
+  </span>
+{% else %}
+  <span class="tl_gray limit_height">–</span>
+{% endif %}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2">
+  <file source-language="en" datatype="php" original="messages" target-language="de">
+    <body>
+      <trans-unit id="CTE.hyerplinkextended.0"><source>Hyperlink extended box</source><target>Hyperlink Extended Box</target></trans-unit>
+      <trans-unit id="CTE.hyperlinkextended.1"><source>Create a hyperlink box.</source><target>Erstellen Sie eine Hyperlink‑Box.</target></trans-unit>
+
+      <trans-unit id="tl_content.hyperlinkextended_legend.0"><source>Hyperlink extended box</source><target>Hyperlink Extended Box</target></trans-unit>
+    </body>
+  </file>
+</xliff>

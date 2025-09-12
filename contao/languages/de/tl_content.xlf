@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2">
+  <file source-language="en" datatype="plaintext" original="messages" target-language="de">
+    <body>
+      <!-- Legend -->
+      <trans-unit id="tl_content.hyperlinkextended_legend">
+        <source>Hyperlink extended box</source>
+        <target>Hyperlink Extended Box</target>
+      </trans-unit>
+
+      <!-- Group field -->
+      <trans-unit id="tl_content.hyperlinks.0">
+        <source>Hyperlinks</source>
+        <target>Hyperlinks</target>
+      </trans-unit>
+      <trans-unit id="tl_content.hyperlinks.1">
+        <source>Define the hyperlinks.</source>
+        <target>Definieren Sie die Hyperlinks.</target>
+      </trans-unit>
+
+      <!-- Existing fields -->
+      <trans-unit id="tl_content.hyperlink_linkTitle.0">
+        <source>Link text</source>
+        <target>Link-Text</target>
+      </trans-unit>
+      <trans-unit id="tl_content.hyperlink_linkTitle.1">
+        <source>Text shown instead of the URL.</source>
+        <target>Text, der anstelle der URL angezeigt wird.</target>
+      </trans-unit>
+
+      <trans-unit id="tl_content.hyperlink_ariaLabel.0">
+        <source>ARIA label</source>
+        <target>ARIA-Label</target>
+      </trans-unit>
+      <trans-unit id="tl_content.hyperlink_ariaLabel.1">
+        <source>Text for aria-label.</source>
+        <target>Text für aria-label.</target>
+      </trans-unit>
+
+      <trans-unit id="tl_content.hyperlink_linkClass.0">
+        <source>CSS class</source>
+        <target>CSS-Klasse</target>
+      </trans-unit>
+      <trans-unit id="tl_content.hyperlink_linkClass.1">
+        <source>Additional classes for the link.</source>
+        <target>Zusätzliche Klassen für den Link.</target>
+      </trans-unit>
+
+      <trans-unit id="tl_content.hyperlink_customAttributes.0">
+        <source>Custom attributes</source><target>Eigene Attribute</target>
+      </trans-unit>
+      <trans-unit id="tl_content.hyperlink_customAttributes.1">
+        <source>One per line, e.g. data-foo="bar" or aria-expanded=false. Allowed items: 'data-', 'aria-' and 'tabindex'. More attributes can be set in config/config.yaml file.</source>
+        <target>Je Zeile ein Eintrag, z. B. data-foo="bar" oder aria-expanded=false. Erlaubt sind 'data-', 'aria-' und 'tabindex'. Weitere Attribute können über die config/config.yaml freigegeben werden.</target>
+      </trans-unit>
+
+      <!-- rel tokens -->
+      <trans-unit id="tl_content.hyperlink_relTokens.0">
+        <source>rel attribute</source>
+        <target>rel-Attribute</target>
+      </trans-unit>
+      <trans-unit id="tl_content.hyperlink_relTokens.1">
+        <source>Select tokens for the rel attribute (multi-select).</source>
+        <target>Tokens für das rel-Attribut auswählen (Mehrfachauswahl).</target>
+      </trans-unit>
+
+      <!-- Option labels used via 'reference' -->
+      <trans-unit id="tl_content.hyperlink_rel_options.noopener"><source>noopener</source><target>noopener</target></trans-unit>
+      <trans-unit id="tl_content.hyperlink_rel_options.noreferrer"><source>noreferrer</source><target>noreferrer</target></trans-unit>
+      <trans-unit id="tl_content.hyperlink_rel_options.nofollow"><source>nofollow</source><target>nofollow</target></trans-unit>
+      <trans-unit id="tl_content.hyperlink_rel_options.ugc"><source>ugc</source><target>ugc</target></trans-unit>
+      <trans-unit id="tl_content.hyperlink_rel_options.sponsored"><source>sponsored</source><target>sponsored</target></trans-unit>
+      <trans-unit id="tl_content.hyperlink_rel_options.external"><source>external</source><target>external</target></trans-unit>
+
+      <!-- download -->
+      <trans-unit id="tl_content.hyperlink_download.0"><source>Force download</source><target>Download erzwingen</target></trans-unit>
+      <trans-unit id="tl_content.hyperlink_download.1"><source>Adds the download attribute.</source><target>Fügt das download-Attribut hinzu.</target></trans-unit>
+
+      <!-- download filename -->
+      <trans-unit id="tl_content.hyperlink_downloadFilename.0"><source>Download filename</source><target>Dateiname für Download</target></trans-unit>
+      <trans-unit id="tl_content.hyperlink_downloadFilename.1"><source>Optional filename for the downloaded file.</source><target>Optionaler Dateiname für die heruntergeladene Datei.</target></trans-unit>
+    </body>
+  </file>
+</xliff>
